@@ -1,0 +1,13 @@
+name: Database Update
+
+on:
+  schedule: 0 0 * * *
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo $PWD
