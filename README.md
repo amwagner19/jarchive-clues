@@ -46,13 +46,3 @@ id,identifier,url,order,value,round,daily_double,category,clue,answer
 2,clue_J_2_1,http://www.j-archive.com/showgame.php?game_id=6895,23,200,1,0,"RUTH BADER GINSBURG (Alex: A whole category devoted to the late justice.)","Always in style, Justice Ginsburg was famous for wearing ""dissent"" these; a famous one came from Banana Republic","dissent collar"
 3,clue_J_3_1,http://www.j-archive.com/showgame.php?game_id=6895,30,200,1,0,"DONATING THEIR WINNINGS","After winning a 2020 tennis tourney in Auckland, Serena Williams donated her winnings to those affected by this nearby disaster","the Australian fires"
 ```
-
-## Use
-```python
-import sqlite3
-import pandas as pd
-
-with sqlite3.connect("jarchive.db") as conn:
-    games = pd.read_sql_query("SELECT * FROM game", conn)
-    questions = pd.read_sql_query("SELECT * FROM question", conn)
-```
