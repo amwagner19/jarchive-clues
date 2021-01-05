@@ -9,7 +9,9 @@ if [[ "$ORIGINAL_MD5" == "$UPDATED_MD5" ]]; then
   echo -e "Database unchanged \n\ta) $ORIGINAL_MD5\n\tb) $UPDATED_MD5"
 else
   echo -e "Database updated \n\ta) $ORIGINAL_MD5\n\tb) $UPDATED_MD5"
+  git config user.name "GitHub Actions Bot"
+  git config user.email "<>"
   git add jarchive.db
   git commit -m "feat: db update"
-  git push https://$ACCESS_TOKEN@github.com/jvani/jarchive.git
+  git push origin main
 fi
