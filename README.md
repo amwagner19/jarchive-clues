@@ -26,34 +26,36 @@ id,identifier,url,order,value,round,daily_double,category,clue,answer
 ```
 
 <details>
-  <summary>Schema</summary>
-  <p>
-  ```sql
-  sqlite> pragma table_info('game');
-  cid  name         type          notnull  dflt_value  pk  
-  ---  -----------  ----------    -------  ----------  --
-  0    id           INTEGER       1                    1   
-  1    season       VARCHAR(255)  1                    0         
-  2    url          VARCHAR(255)  1                    0         
-  3    description  VARCHAR(255)  1                    0         
-  4    players      VARCHAR(255)  1                    0         
-  5    crawled      DATETIME      0                    0    
+<summary>Schema</summary>
+<p>
 
-  sqlite> pragma table_info('question');
-  cid  name          type          notnull  dflt_value  pk        
-  ---  ------------  ----------    -------  ----------  --
-  0    id            INTEGER       1                    1         
-  1    identifier    VARCHAR(255)  1                    0         
-  2    url           VARCHAR(255)  1                    0         
-  3    order         INTEGER       0                    0         
-  4    value         INTEGER       0                    0         
-  5    round         INTEGER       1                    0         
-  6    daily_double  INTEGER       1                    0         
-  7    category      VARCHAR(255)  1                    0         
-  8    clue          VARCHAR(255)  1                    0         
-  9    answer        VARCHAR(255)  1                    0
-  \```
-  </p>
+```sql
+sqlite> pragma table_info('game');
+cid  name         type          notnull  dflt_value  pk  
+---  -----------  ----------    -------  ----------  --
+0    id           INTEGER       1                    1   
+1    season       VARCHAR(255)  1                    0         
+2    url          VARCHAR(255)  1                    0         
+3    description  VARCHAR(255)  1                    0         
+4    players      VARCHAR(255)  1                    0         
+5    crawled      DATETIME      0                    0    
+
+sqlite> pragma table_info('question');
+cid  name          type          notnull  dflt_value  pk        
+---  ------------  ----------    -------  ----------  --
+0    id            INTEGER       1                    1         
+1    identifier    VARCHAR(255)  1                    0         
+2    url           VARCHAR(255)  1                    0         
+3    order         INTEGER       0                    0         
+4    value         INTEGER       0                    0         
+5    round         INTEGER       1                    0         
+6    daily_double  INTEGER       1                    0         
+7    category      VARCHAR(255)  1                    0         
+8    clue          VARCHAR(255)  1                    0         
+9    answer        VARCHAR(255)  1                    0
+```
+
+</p>
 </details>
 
 ## Roadmap
